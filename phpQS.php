@@ -112,6 +112,8 @@ if (!isset($_GET["Cleanup"])) {
         // Get blob.
         echo "This is the content of the blob uploaded: ";
         $blob = $blobClient->getBlob($containerName, $fileToUpload);
+        header("Content-Type:image/jpeg");
+        header('Content-Disposition: attachment; filename="' . $fileToUpload . '"');
         fpassthru($blob->getContentStream());
         echo "<br />";
     }
