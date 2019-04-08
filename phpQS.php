@@ -46,7 +46,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=sandriablob;Acco
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$fileToUpload = "sandria.jpg";
+$fileToUpload = "sandria".jpg;
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
